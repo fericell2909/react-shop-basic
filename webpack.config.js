@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path:   path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js','.jsx'],
@@ -50,10 +51,13 @@ module.exports = {
         }),
 	],
     devServer: {
+        historyApiFallback: true,
+        /*,
         allowedHosts: path.join(__dirname, 'dist'), // contentBase corresponde a webpack 4
         // ahora en Webpack 5 se usa allowedHosts
         // créditos al compañero Fabian Rivera Restrepo
         port: 3005,
         compress: true,
+        */
     }
 }

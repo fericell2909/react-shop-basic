@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Layout = ({children}) => {
+const Layout = (props) => {
     return (
         <>
             <div className="Layout">
-                {children}  
+                { props.children }  
             </div>  
         </>
     )
